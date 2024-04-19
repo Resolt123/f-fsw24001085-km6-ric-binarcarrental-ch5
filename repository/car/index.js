@@ -121,7 +121,7 @@ exports.createCar = async (payload, id, option, spec) => {
 };
 
 exports.updateCar = async (id, payload, option, spec, id_option, id_spec) => {
-  // const key = `cars:${id}`;
+  const key = `cars:${id}`;
   if (payload.image) {
     // upload image to cloudinary
     const { image } = payload;
@@ -173,7 +173,7 @@ exports.updateCar = async (id, payload, option, spec, id_option, id_spec) => {
   });
   if (data.length > 0) {
     // save to redis (cache)
-    // await setData(key, data[0], 300);
+    await setData(key, data[0], 300);
 
     return data[0];
   }

@@ -158,6 +158,7 @@ exports.createCar = async (req, res, next) => {
 exports.updateCar = async (req, res, next) => {
   try {
     const { id } = req.params;
+    const { name } = req.user;
     const { image } = req.files;
     const {
       plate,
@@ -262,6 +263,7 @@ exports.updateCar = async (req, res, next) => {
       available,
       type,
       year,
+      updatedby:name
     };
 
     const data = await carUsecase.updateCar(id,payload, option, spec,id_option,id_spec);

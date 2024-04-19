@@ -1,9 +1,9 @@
-const { register, login, profile } = require("../usecase/auth");
+const { register, login, profile, updateRole } = require("../usecase/auth");
 
 exports.register = async (req, res, next) => {
   try {
     // get the body
-    const { email, password, name } = req?.body;
+    const { email, password, name ,role} = req?.body;
 
     if (email == "" || !email) {
       return next({
@@ -28,6 +28,7 @@ exports.register = async (req, res, next) => {
       email,
       password,
       name,
+      role
     });
 
     res.status(200).json({
@@ -76,6 +77,37 @@ exports.profile = async (req, res, next) => {
 
     res.status(200).json({
       message: "Success",
+      data,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.updateRole = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const {
+      role
+    } = req.body;
+    if (!role || role == "") {
+      return next({
+        statusCode: 404,
+        message: `role must be filled!`,
+      });
+    }
+    
+    const payload = {
+    role
+    };
+
+    const data = await updateRole(
+      id,
+      payload,
+    );
+
+    res.status(200).json({
+      message: "Successs",
       data,
     });
   } catch (error) {

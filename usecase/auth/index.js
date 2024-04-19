@@ -4,6 +4,7 @@ const {
   createUser,
   getUserByEmail,
   getUserByID,
+  updateRole
 } = require("../../repository/user");
 
 exports.register = async (payload) => {
@@ -81,6 +82,25 @@ exports.profile = async (id) => {
   } else {
     delete data?.password;
   }
+
+  return data;
+};
+exports.updateRole = async (id, payload) => {
+  // update old data
+  await updateRole(id, payload);
+
+  // find the new data
+    let data = await getUserByID(id);
+    if (!data) {
+      throw new Error(`User is not found!`);
+    }
+
+    // delete password
+    if (data?.dataValues?.password) {
+      delete data?.dataValues?.password;
+    } else {
+      delete data?.password;
+    }
 
   return data;
 };
