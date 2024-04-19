@@ -1,0 +1,4 @@
+runtime: nodejs20
+# service: richard-aurelio-angsari-challenge-5
+vpc_access_connector:
+    name: "projects/kampus-merdeka-binar/locations/asia-southeast2/connectors/connect-to-sql"

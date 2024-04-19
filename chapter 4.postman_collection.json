@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "a27e6741-8a28-4199-a8bb-fe12ba2fef44",
+		"name": "chapter 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33599971"
+	},
+	"item": [
+		{
+			"name": "get data",
+			"item": [
+				{
+					"name": "get car list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get car details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/car/00f72d91-613d-4ab2-b47d-c05e79dfbd32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"car",
+								"00f72d91-613d-4ab2-b47d-c05e79dfbd32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get option list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/option",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"option"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get option details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/option/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"option",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get spec list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/spec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"spec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get spec details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/spec/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"spec",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create data",
+			"item": [
+				{
+					"name": "create car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "plate",
+									"value": "ini percobaan",
+									"type": "text"
+								},
+								{
+									"key": "manufacture",
+									"value": "BMW",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "X5",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/Kuliah/studi independent binar/virtual background - binar x km.png"
+								},
+								{
+									"key": "rentPerDay",
+									"value": "800000",
+									"type": "text"
+								},
+								{
+									"key": "capacity",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Rear passenger map pockets. Electrochromic rearview mirror. Dual chrome exhaust tips. Locking glove box.",
+									"type": "text"
+								},
+								{
+									"key": "alevailabAt",
+									"value": "2022-03-23T15:49:05.563Z",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "Automatic",
+									"type": "text"
+								},
+								{
+									"key": "available",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Convertible",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2019",
+									"type": "text"
+								},
+								{
+									"key": "option",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "option",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "spec",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "spec",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create option",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type_option",
+									"value": "option keempat",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/option",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"option"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create spec",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type_spec",
+									"value": "spec ketiga",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/spec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"spec"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "edit data",
+			"item": [
+				{
+					"name": "edit spec",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type_spec",
+									"value": "yang id satu di update",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/spec/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"spec",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit car",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "plate",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "manufacture",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/Kuliah/studi independent binar/virtual background - binar x km.png"
+								},
+								{
+									"key": "rentPerDay",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "capacity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "alevailabAt",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "transmission",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "available",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2111",
+									"type": "text"
+								},
+								{
+									"key": "option",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "option",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "spec",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "id_option",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "id_option",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "id_spec",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/car/765de4b6-c3f6-4d2e-aa8b-e380dcd5e008",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"car",
+								"765de4b6-c3f6-4d2e-aa8b-e380dcd5e008"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit option",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type_option",
+									"value": "opsi satu di update",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/option/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"option",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "delete data",
+			"item": [
+				{
+					"name": "delete car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/car/3b0681e8-9313-47a2-b380-1caa1d34d8c3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"car",
+								"3b0681e8-9313-47a2-b380-1caa1d34d8c3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete option",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/option/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"option",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete spec",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/spec/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"spec",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
