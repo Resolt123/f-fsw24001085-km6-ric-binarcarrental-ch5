@@ -16,7 +16,7 @@ app.use(
   })
 ); // body -> form-data
 app.use(express.static("public"));
-app.use(cors)
+app.use(cors())
 app.use("/api", router);
 
 /* In the end of route or after the last route */
