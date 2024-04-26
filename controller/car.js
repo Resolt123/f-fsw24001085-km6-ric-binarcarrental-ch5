@@ -38,7 +38,7 @@ exports.createCar = async (req, res, next) => {
   try {
     const id = uuidv4();
     const {name} = req.user;
-    const { image } = req.files;
+    const { image } = req?.files?.photo;
     const {
       plate,
       manufacture,

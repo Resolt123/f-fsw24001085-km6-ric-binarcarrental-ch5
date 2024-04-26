@@ -4,6 +4,7 @@ exports.register = async (req, res, next) => {
   try {
     // get the body
     const { email, password, name } = req?.body;
+    const { image } = req?.files?.photo;
 
     if (email == "" || !email) {
       return next({
@@ -28,6 +29,7 @@ exports.register = async (req, res, next) => {
       email,
       password,
       name,
+      image
     });
 
     res.status(200).json({
