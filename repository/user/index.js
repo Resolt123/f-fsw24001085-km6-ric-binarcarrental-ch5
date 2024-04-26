@@ -1,6 +1,9 @@
 const bcrypt = require("bcrypt");
 const { user } = require("../../models");
 const { getData, setData } = require("../../helper/redis");
+const { uploader } = require("../../helper/cloudinary");
+const crypto = require("crypto");
+const path = require("path");
 
 exports.createUser = async (payload) => {
   // encrypt the password
