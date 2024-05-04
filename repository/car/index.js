@@ -100,13 +100,13 @@ exports.createCar = async (payload, id, option, spec) => {
 
   // Create data to postgres
   const data = await car.create(payload);
-  for (let index = 0; index < option.length; index++) {
+  for (let index = 0; index < option?.length; index++) {
     await car_options.create({
       id_car: id,
       id_option: option[index],
     });
   }
-  for (let index = 0; index < spec.length; index++) {
+  for (let index = 0; index < spec?.length; index++) {
     await car_specs.create({
       id_car: id,
       id_spec: spec[index],
