@@ -114,8 +114,6 @@ exports.createCar = async (payload, id, option, spec) => {
   }
 
   // Save to redis (cache)
-  const key = `cars:${data.id}`;
-  await setData(key, data, 300);
 
   return data;
 };
