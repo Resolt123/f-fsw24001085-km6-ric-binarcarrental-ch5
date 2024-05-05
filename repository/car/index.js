@@ -139,7 +139,7 @@ exports.updateCar = async (id, payload, option, spec, id_option, id_spec) => {
     },
   });
 
-  for (let index = 0; index < option.length; index++) {
+  for (let index = 0; index < option?.length; index++) {
     await car_options.update(
       { id_option: option[index] },
       {
@@ -150,7 +150,7 @@ exports.updateCar = async (id, payload, option, spec, id_option, id_spec) => {
       }
     );
   }
-  for (let index = 0; index < spec.length; index++) {
+  for (let index = 0; index < spec?.length; index++) {
     await car_specs.update(
       { id_spec: spec[index] },
       {
