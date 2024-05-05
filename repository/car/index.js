@@ -113,13 +113,11 @@ exports.createCar = async (payload, id, option, spec) => {
     });
   }
 
-  // Save to redis (cache)
 
   return data;
 };
 
 exports.updateCar = async (id, payload, option, spec, id_option, id_spec) => {
-  const key = `cars:${id}`;
   if (payload.image) {
     // upload image to cloudinary
     const { image } = payload;
@@ -161,19 +159,6 @@ exports.updateCar = async (id, payload, option, spec, id_option, id_spec) => {
         },
       }
     );
-  }
-
-  // get data from postgres
-  const data = await car.findAll({
-    where: {
-      id,
-    },
-  });
-  if (data.length > 0) {
-    // save to redis (cache)
-    await setData(key, data[0], 300);
-
-    return data[0];
   }
 
   throw new Error(`Car is not found!`);
