@@ -159,7 +159,7 @@ exports.updateCar = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { name } = req.user;
-    const { image } = req?.files?.photo;
+    const image = req?.files?.photo;
     const {
       plate,
       manufacture,
